@@ -1,6 +1,4 @@
-package laiCodeBasic.LinkedList;
-
-import java.util.List;
+package laiCode.linkedList;
 
 public class InsertNodeWithDummy {
     public ListNode insert(ListNode head, int target) {

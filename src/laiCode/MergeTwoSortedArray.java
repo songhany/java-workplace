@@ -1,4 +1,4 @@
-package laiCodeBasic;
+package laiCode;
 
 import java.util.Arrays;
 

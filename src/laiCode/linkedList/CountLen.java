@@ -1,4 +1,4 @@
-package laiCodeBasic.LinkedList;
+package laiCode.linkedList;
 
 public class CountLen {
     public int count(ListNode head) {

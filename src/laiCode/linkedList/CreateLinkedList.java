@@ -1,4 +1,4 @@
-package laiCodeBasic.LinkedList;
+package laiCode.linkedList;
 
 public class CreateLinkedList {
     public ListNode generate(int n) {

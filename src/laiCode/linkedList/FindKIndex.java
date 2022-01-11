@@ -1,4 +1,4 @@
-package laiCodeBasic.LinkedList;
+package laiCode.linkedList;
 
 public class FindKIndex {
     public ListNode findKIndex(ListNode head, int k) {

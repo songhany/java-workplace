@@ -1,4 +1,4 @@
-package laiCodeBasic.basic;
+package laiCode.basic;
 
 public class RemoveDuplicate {
     public static int[] removeDuplicate(int[] arr, int duplicate) {

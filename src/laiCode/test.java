@@ -1,4 +1,4 @@
-package laiCodeBasic;
+package laiCode;
 
 public class test {
     public static int minIndex(int[] array, int i) {

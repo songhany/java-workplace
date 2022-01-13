@@ -1,4 +1,4 @@
-package laiCodeBasic.LinkedList;
+package laiCode.linkedList;
 
 public class InsertNode {
     public ListNode insert(ListNode head, int target) {

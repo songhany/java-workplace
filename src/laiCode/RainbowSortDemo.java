@@ -1,4 +1,4 @@
-package laiCodeBasic;
+package laiCode;
 
 public class RainbowSortDemo {
     public int[] rainbowSort(int[] array) {

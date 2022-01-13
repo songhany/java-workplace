@@ -56,6 +56,5 @@ class Solution {
 
         List<Integer> alist = new ArrayList<>();
         List<Integer> alist2 = new LinkedList<>();
-        alist2.
     }
 }

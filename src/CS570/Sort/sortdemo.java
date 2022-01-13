@@ -1,4 +1,4 @@
-package sort;
+package CS570.Sort;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

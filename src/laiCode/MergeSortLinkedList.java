@@ -1,7 +1,5 @@
 package laiCode;
 
-import java.util.Arrays;
-
 class ListNode {
     public int value;
     public ListNode next;

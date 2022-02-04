@@ -4,7 +4,7 @@ public class LinkedList {
 	
 	public class Node {
 		public Object item;
-	  public Node next;
+		public Node next;
 	}
 
 	private int size;

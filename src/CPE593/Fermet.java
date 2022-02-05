@@ -5,7 +5,7 @@ package CPE593;
     Author: Songhan Yu  10470449
     Cite: https://stevens.zoom.us/rec/play/IqCo9R2BiXZkIuFZMP_bqTWpaGOwhRwQGcFu1c18YYC-4EVrOGmkfOxX3NC4KxlAONDPLrtSqb3y7y6K.EIDaKFXllvdY-tAQ
  */
-/*  BigInteger powerMod(BigInteger base, BigInteger exp, BigInteger mod)
+/*  BigInteger power(BigInteger base, BigInteger exp)
         x^n if n=17, we have x^17 = x^10001 = x*x*x*x*...
                                   = x * x^16
                                   = x * x^8 * x^8

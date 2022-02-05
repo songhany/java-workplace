@@ -37,21 +37,26 @@ public class Fermet {
     }
 
     /*
-        Fermat(n, k)
+        Fermet Little Theorem:
+        If 'p' is prime, then for all integers 'a' such that 2 <= a <= p-1, a**(p-1) % p = 1.
+        Idea is to chose a random 'a' from the above mentioned range, and return "PRIME" if remainder is 1 for each time.
+        This is a probabilistic method: It returns true for all primes, it may return true for composites (non-primes).
+
+        Fermat(p, k)
           for i ← 1 to k
-            a ← random(2, n-1)
-            if powermod(a, n-1, n) != 1
+            a ← random(2, p-1)
+            if powermod(a, p-1, p) != 1
               return false
             end
           end
           return true (probably?)
         end
      */
-    public static String fermat(BigInteger prime, int k) {  // k is number of times that we want to check prime
+    public static String fermat(BigInteger prime, int k) {  // k is number of times that we check prime with random witness 'a'
         BigInteger pMinusOne = prime.subtract(BigInteger.ONE);  // calculate exponent p-1
         for (int i = 1; i < k; i++) {
             BigInteger a = new BigInteger(prime.bitCount(), random);  // generate a random BigInteger as witness, witness number 'a' is in the range (1, prime)
-            while (a.compareTo(BigInteger.ONE) <= 0 || a.compareTo(prime) >= 0 ) {  // witness number 'a' should be in the range (1, prime)
+            while (a.compareTo(BigInteger.ONE) <= 0 || a.compareTo(prime) >= 0 ) {  // ❤ witness number 'a' must be in range 2 <= a <= p-1
                 a = new BigInteger(prime.bitCount(), random);
             }
             // System.out.println("witness 'a' is " + a);

@@ -20,6 +20,9 @@ public class test {
     }
 
     public static void main(String[] args) {
-        System.out.println(minIndex(new int[]{5,4,3,2,1}, 1));
+        int[] arr = new int[2*3-1];
+        for (int a: arr) {
+            System.out.println(a);
+        }
     }
 }

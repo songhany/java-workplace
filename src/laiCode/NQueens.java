@@ -4,7 +4,7 @@ import java.util.*;
 
 public class NQueens {
     public List<List<Integer>> nqueens(int n) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
         List<Integer> cur = new ArrayList<>();
         helper(n, cur, result);
         return result;

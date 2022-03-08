@@ -32,8 +32,8 @@ public class HWGrowArray {
 
 	public void addStart(int v) {
 		checkGrow();
-		for (int i = 0; i < size; i++) {  // move every element in array to right by 1
-			p[i] = p[i+1];
+		for (int i = size; i > 0; i--) {  // move every element in array to right by 1
+			p[i] = p[i-1];
 		}
 		p[0] = v;
 		size++;
@@ -64,18 +64,18 @@ public class HWGrowArray {
 
 		for (int i = 0; i < 500; i++)
 			a.addEnd(i); // really fast!
-//
-//		for (int i = 0; i < 10000000; i++)
-//			a.addEnd(i); // every time you need to grow, double
+
+		for (int i = 0; i < 10000000; i++)
+			a.addEnd(i); // every time you need to grow, double
 
 		a.addStart(5);
 		// 5 0 1 2 3 4 5 6 7 8....   499 0 1 2 3 4 5 6 .... 999999
-//
-//		for (int i = 0; i < 10000; i++)
-//			a.removeEnd();
-//
-//		for (int i = 0; i < 10000; i++)
-//			a.removeStart();
+
+		for (int i = 0; i < 10000; i++)
+			a.removeEnd();
+
+		for (int i = 0; i < 10000; i++)
+			a.removeStart();
 		
 		// 10000 10001 10002 10003 10004 10005 .... .... 998999	
 		

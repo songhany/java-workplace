@@ -1,4 +1,5 @@
 package laiPractice;
+
 // https://app.laicode.io/app/problem/613
 public class MyCircularDeque {
     private int head;  // Front
@@ -10,7 +11,6 @@ public class MyCircularDeque {
     /** Initialize your data structure here. Set the size of the deque to be k. */
     public MyCircularDeque(int k) {
         arr = new int[k];
-        head = tail = 0;
         capacity = k;
     }
 
@@ -99,6 +99,18 @@ public class MyCircularDeque {
         return size == capacity;
     }
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            sb.append(arr[i]).append(" ");
+        }
+        return sb.toString();
+//		String s = "";
+//		for (Node cur = head; cur != null; cur = cur.next) {
+//			s = s + cur.val + ", ";
+//		}
+//		return s;
+    }
     /**
      * Your MyCircularDeque object will be instantiated and called as such:
      * MyCircularDeque obj = new MyCircularDeque(k);
@@ -113,14 +125,17 @@ public class MyCircularDeque {
      */
     public static void main(String[] args) {
         MyCircularDeque obj = new MyCircularDeque(3);
-        System.out.println(obj.insertFront(1));
+        obj.insertFront(1);
         obj.insertFront(2);
         obj.insertFront(3);
+        System.out.println(obj.toString());
         obj.deleteLast();
         obj.deleteLast();
         obj.deleteLast();
 
         obj.insertLast(1);
+        obj.insertLast(2);
+        System.out.println(obj.toString());
         obj.isEmpty();
         obj.isFull();
         obj.deleteFront();
@@ -133,5 +148,6 @@ public class MyCircularDeque {
         obj.getRear();
         obj.isEmpty();
         obj.isFull();
+        System.out.println(obj.toString());
     }
 }

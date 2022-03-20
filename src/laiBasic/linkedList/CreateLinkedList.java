@@ -13,11 +13,3 @@ public class CreateLinkedList {
         return head;
     }
 }
-
-class ListNode {
-    int value;
-    ListNode next;
-    public ListNode(int v) {
-        value = v;
-    }
-}

@@ -1,16 +1,18 @@
+package laiBasic;
+
 import java.util.ArrayList;
 
-class ListNode {
-	public int value;
-	public ListNode next;
-
-	public ListNode(int value) {
-		this.value = value;
-		next = null;
-	}
-}
-
 public class ArrayToLinkedList {
+	static class ListNode {
+		public int value;
+		public ListNode next;
+
+		public ListNode(int value) {
+			this.value = value;
+			next = null;
+		}
+	}
+
 	public static ListNode arrayToNode(int[] arr) {
 		// If the array is empty, do nothing
 		if(arr.length == 0)
@@ -45,5 +47,27 @@ public class ArrayToLinkedList {
         }
         System.out.println(list);
 
+	}
+
+	public static void main(String[] args) {
+		// Single element array
+		int [] array1 = {1};
+		ListNode l1 = ArrayToLinkedList.arrayToNode(array1);
+		ArrayToLinkedList.printLinkedList(l1);
+
+
+		int [] array2 = {1,2,3};
+		ListNode l2 = ArrayToLinkedList.arrayToNode(array2);
+		ArrayToLinkedList.printLinkedList(l2);
+
+		int [] array3 = {1,2,3,4,5,6};
+		ListNode l3 = ArrayToLinkedList.arrayToNode(array3);
+		ArrayToLinkedList.printLinkedList(l3);
+
+
+		// Empty array
+		int [] array4 = {};
+		ListNode l4 = ArrayToLinkedList.arrayToNode(array4);
+		ArrayToLinkedList.printLinkedList(l4);
 	}
 }

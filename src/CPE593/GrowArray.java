@@ -1,6 +1,6 @@
 package CPE593;
 
-public class HWGrowArray {
+public class GrowArray {
 	private int[] p;
 	private int size; // the number of elements used
 	private int capacity; // the amount of memory
@@ -18,7 +18,7 @@ public class HWGrowArray {
 		}
 	}
 
-	public HWGrowArray(int initialCapacity) {
+	public GrowArray(int initialCapacity) {
 		p = new int[initialCapacity];
 		size = 0;
 		capacity = initialCapacity;
@@ -60,7 +60,7 @@ public class HWGrowArray {
 	}
 
 	public static void main(String[] args) {
-		HWGrowArray a = new HWGrowArray(500); // empty list, with 500 elements
+		GrowArray a = new GrowArray(500); // empty list, with 500 elements
 
 		for (int i = 0; i < 500; i++)
 			a.addEnd(i); // really fast!

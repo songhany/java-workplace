@@ -1,4 +1,4 @@
-package laiBasic.binarSearch;
+package laiBasic;
 
 import java.util.Arrays;
 

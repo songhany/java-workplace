@@ -1,6 +1,6 @@
 package CPE593;
 
-public class HWDoubleLinkedList {
+public class DoubleLinkedList {
 	private static class Node { // static class in Java does not have pointer to the container
 		Node next;
 		Node prev;
@@ -13,7 +13,7 @@ public class HWDoubleLinkedList {
 
 	private Node head;
 	private Node tail;
-	public HWDoubleLinkedList() {
+	public DoubleLinkedList() {
 		head = null;
 		tail = null;
 	}
@@ -103,7 +103,7 @@ public class HWDoubleLinkedList {
 	}
 
 	public static void main(String[] args) {
-		HWDoubleLinkedList a = new HWDoubleLinkedList();
+		DoubleLinkedList a = new DoubleLinkedList();
 		final int n = 1000000;
 		for (int i = 0; i < n; i++)
 			a.addStart(i);

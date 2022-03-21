@@ -9,10 +9,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Quicksort {
+public class QuickSort {
     private Random r;
 
-    public Quicksort() {
+    public QuickSort() {
         r = new Random(0);
     }
 
@@ -83,7 +83,7 @@ public class Quicksort {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        Quicksort qs = new Quicksort();
+        QuickSort qs = new QuickSort();
 
         // Test your code with a large number of elements (10 million)
         System.out.println("========== Test your code with a large number of elements ==========");

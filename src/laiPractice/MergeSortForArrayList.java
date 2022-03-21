@@ -57,6 +57,6 @@ public class MergeSortForArrayList {
         arr.add(0);
         System.out.println(arr);
         System.out.println(ms.mergeSort(arr));
-        System.out.println(arr);
+//        System.out.println(arr);
     }
 }

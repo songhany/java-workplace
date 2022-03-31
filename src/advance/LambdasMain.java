@@ -11,8 +11,7 @@ public class LambdasMain {
     public static void main(String[] args) {
         List<String> input = List.of("hello", "\t ", "world", "", "\t", " ", "goodbye", " ");
 
-        long oldNumberOfWhitesSpaceStrings =
-                countMatchingStrings(
+        long oldNumberOfWhitesSpaceStrings = countMatchingStrings(
                         input,
                         new Predicate<String>() {
                             @Override
@@ -22,16 +21,12 @@ public class LambdasMain {
                         }
                 );
 
-        long numberOfWhitesSpaceStrings1 =
-                countMatchingStrings(
+        long numberOfWhitesSpaceStrings1 = countMatchingStrings(
                         input,
-                        (String s) -> {
-                            return s.trim().isEmpty();
-                        }
+                        (String s) -> { return s.trim().isEmpty(); }
                 );  // lambda expression
 
-        long numberOfWhitesSpaceStrings =
-                countMatchingStrings(
+        long numberOfWhitesSpaceStrings = countMatchingStrings(
                         input,
                         s -> s.trim().isEmpty()
                 );  // lambda expression

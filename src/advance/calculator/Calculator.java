@@ -1,4 +1,4 @@
-package other.advance.calculator;
+package advance.calculator;
 
 import java.util.HashMap;
 import java.util.Map;

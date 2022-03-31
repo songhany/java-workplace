@@ -1,4 +1,4 @@
-package other.advance;
+package other.advance.binaryOperation;
 
 public interface BinaryOperation<T, R> {
 

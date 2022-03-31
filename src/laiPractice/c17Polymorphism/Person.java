@@ -1,4 +1,4 @@
-package laiPractice.c18Polymorphism;
+package laiPractice.c17Polymorphism;
 
 public class Person {
     public final String name;
@@ -34,7 +34,7 @@ class Employee extends Person {
     }
 }
 
-class Test {
+class Tester {
     public static void main(String[] args) {
         Person p = new Person("Jack");
         System.out.println(p.getNameCard());

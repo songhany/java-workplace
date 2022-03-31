@@ -1,10 +1,10 @@
-package other.hotelReservation;
+package hotelReservation;
 
-import other.hotelReservation.api.HotelResource;
-import other.hotelReservation.model.Customer;
-import other.hotelReservation.model.IRoom;
-import other.hotelReservation.service.CustomerService;
-import other.hotelReservation.service.ReservationService;
+import hotelReservation.api.HotelResource;
+import hotelReservation.model.Customer;
+import hotelReservation.model.IRoom;
+import hotelReservation.service.CustomerService;
+import hotelReservation.service.ReservationService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,7 +18,7 @@ public class MainMenu {
     public static Scanner input;
 
     public static void displayMenu() {
-        System.out.println("Welcome to Songhan's Hotels! Choose an option below.");
+        System.out.println("—————— Welcome to Songhan's Hotels! Choose an option below. ——————");
         System.out.println("1 - Find and reserve a room");
         System.out.println("2 - See my reservations");
         System.out.println("3 - Create an account");

@@ -1,8 +1,8 @@
-package other.hotelReservation.api;
+package hotelReservation.api;
 
-import other.hotelReservation.model.*;
-import other.hotelReservation.service.CustomerService;
-import other.hotelReservation.service.ReservationService;
+import hotelReservation.model.*;
+import hotelReservation.service.CustomerService;
+import hotelReservation.service.ReservationService;
 
 import java.util.Collection;
 import java.util.List;

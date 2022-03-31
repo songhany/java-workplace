@@ -1,4 +1,4 @@
-package other.hotelReservation.model;
+package hotelReservation.model;
 
 public class Tester {
     public static void main(String[] args) {

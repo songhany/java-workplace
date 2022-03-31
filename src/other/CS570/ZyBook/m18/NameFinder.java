@@ -22,7 +22,7 @@ public class NameFinder {
       itemPos = midVal;
     }
     else if (rangeSize == 1) {                                // Base case 2: match not found
-      System.out.println(indentAmt + "Person not found.");
+      System.out.println(indentAmt + "Person.java not found.");
       itemPos = -1;
     }
     else {                                                    // Recursive case: search lower or upper half

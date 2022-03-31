@@ -1,4 +1,4 @@
-package other.hotelReservation.model;
+package hotelReservation.model;
 
 public class Room implements IRoom {
     private String roomNumber;

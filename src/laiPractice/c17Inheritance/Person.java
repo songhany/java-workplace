@@ -1,4 +1,4 @@
-package laiPractice.c18Inheritance;
+package laiPractice.c17Inheritance;
 
 public class Person {
     public final String name;
@@ -23,7 +23,7 @@ class Employee extends Person {
     }
 }
 
-class Test {
+class Tester {
     public static void main(String[] args) {
         Employee e = new Employee("Songhan");
         String name = e.name;

@@ -1,6 +1,6 @@
-package other.hotelReservation.service;
+package hotelReservation.service;
 
-import other.hotelReservation.model.*;
+import hotelReservation.model.*;
 
 import java.util.*;
 

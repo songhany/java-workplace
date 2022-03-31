@@ -1,4 +1,4 @@
-package other.hotelReservation.model;
+package hotelReservation.model;
 
 public interface IRoom {
     public String getRoomNumber();

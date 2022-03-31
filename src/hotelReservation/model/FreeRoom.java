@@ -1,4 +1,4 @@
-package other.hotelReservation.model;
+package hotelReservation.model;
 
 public class FreeRoom extends Room {
     public FreeRoom(String roomNumber, Double price, RoomType roomType) {

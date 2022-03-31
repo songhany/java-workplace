@@ -1,14 +1,14 @@
-package other.hotelReservation.api;
+package hotelReservation.api;
 
 // create the resource classes, so we can provide an intermediary between the UI components and services.
 // Resource classes are used for defining the Application Programming Interface(API)
 
 
-import other.hotelReservation.model.Customer;
-import other.hotelReservation.model.IRoom;
-import other.hotelReservation.model.Reservation;
-import other.hotelReservation.service.CustomerService;
-import other.hotelReservation.service.ReservationService;
+import hotelReservation.model.Customer;
+import hotelReservation.model.IRoom;
+import hotelReservation.model.Reservation;
+import hotelReservation.service.CustomerService;
+import hotelReservation.service.ReservationService;
 
 import java.util.*;
 

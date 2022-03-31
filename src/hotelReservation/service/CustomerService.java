@@ -1,6 +1,6 @@
-package other.hotelReservation.service;
+package hotelReservation.service;
 
-import other.hotelReservation.model.Customer;
+import hotelReservation.model.Customer;
 
 import java.util.ArrayList;
 import java.util.Collection;

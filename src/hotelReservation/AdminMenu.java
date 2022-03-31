@@ -1,14 +1,14 @@
-package other.hotelReservation;
+package hotelReservation;
 
 
-import other.hotelReservation.api.AdminResource;
-import other.hotelReservation.model.IRoom;
-import other.hotelReservation.model.Room;
-import other.hotelReservation.model.RoomType;
+import hotelReservation.api.AdminResource;
+import hotelReservation.model.IRoom;
+import hotelReservation.model.Room;
+import hotelReservation.model.RoomType;
 
 import java.util.Scanner;
 
-import static other.hotelReservation.api.HotelResource.reservationService;
+import static hotelReservation.api.HotelResource.reservationService;
 
 public class AdminMenu {
     public static int navigateToMainMenu = 6;
@@ -16,7 +16,7 @@ public class AdminMenu {
     private static AdminResource adminResource;
 
     public static void displayMenu() {
-        System.out.println("Admin Menu");
+        System.out.println("———————— Admin Menu ————————");
         System.out.println("1 - See all Customers");
         System.out.println("2 - See all Rooms");
         System.out.println("3 - See all Reservations");
@@ -28,7 +28,7 @@ public class AdminMenu {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a Room Number for the Room you add:");
         String roomID = scanner.next();
-        System.out.println("Enter its Room Type 'Single/Double'");
+        System.out.println("Enter its Room Type 'SINGLE/DOUBLE'");
         RoomType roomType = RoomType.valueOf(String.valueOf(scanner.next()));
         System.out.println("Enter its Room Price per night");
         Double roomPrice = scanner.nextDouble();

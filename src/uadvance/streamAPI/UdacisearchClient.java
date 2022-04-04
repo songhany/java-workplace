@@ -1,4 +1,4 @@
-package advance.streamAPI;
+package uadvance.streamAPI;
 
 import java.time.Duration;
 import java.time.Instant;

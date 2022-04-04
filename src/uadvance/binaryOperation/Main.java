@@ -1,4 +1,4 @@
-package advance.binaryOperation;
+package uadvance.binaryOperation;
 
 public final class Main {
     public static void main(String[] args) {

@@ -10,27 +10,19 @@ import java.io.IOException;
 	https://drive.google.com/drive/folders/0Bwxfq4Y7f7vkTkZnVEFEcXVEWmc?resourcekey=0-mOXByawNd1BgAZIqFmdGzQ&usp=sharing
  */
 class HashMapLinearProbing {
-    private static class Node {
-        String key;
-        int val;
-        Node(String k, int v) {
-            key = k;
-            val = v;
-        }
-    }
 
     private Node[] table;
     private int used;
     private int[] hist;
 
-    public HashMapLinearProbing(int initialSize) {
-        table = new Node[initialSize];
-        used = 0;
+    public HashMapLinearProbing(int initialCapacity) {
+        table = new Node[initialCapacity];
+        int count = 0;
         hist = new int[12];
     }
 
-    public void add(String key, int value) {
-        if (2 * used >= table.length) {
+    public void add(String word, int value) {
+        if (2 * count >= table.length) {
             grow();
         }
         int pos = hash(word);
@@ -50,8 +42,8 @@ class HashMapLinearProbing {
                 pos = 0;
             }
         }
-        used++;
-        table[pos] = new Node(word, v);
+        count++;
+        table[pos] = new Node(word, value);
         if (count > 11) {
             count = 11;
         }
@@ -69,19 +61,40 @@ class HashMapLinearProbing {
     private final int hash(String word) {
         int sum = word.length();
         for (int i = 0; i < word.length(); i++) {
-            sum = sum << 13 + sum << 3 + word.charAt(i) + sum >> 17;
+            sum = sum * 26 + word.charAt(i);
         }
-        return sum & (table.length - 1);
+        return sum % (table.length - 1);
     }
 }
 
 class HashMapLinearChaining {
-    public void add(int key, int value) {
+    public void add(String word, int value) {
 
     }
 
-    public int get(int key) {
+    public int get(String word) {
 
+    }
+}
+
+class MyBufferedReader {
+    private FileInputStream input;
+    private StringBuilder buffer;
+    public MyBufferedReader(FileInputStream in) {
+        input = in;
+        buffer = new StringBuilder();
+    }
+    public String nextLine() throws IOException {
+        while (true) {
+            int c = input.read();
+            if (c == -1) {
+                break;
+            }
+            buffer.append((char)c);
+        }
+        String output = buffer.toString();
+        buffer = new StringBuilder();
+        return output;
     }
 }
 
@@ -89,36 +102,40 @@ public class HWHashMap {
     public static void main(String[] args) throws IOException {
         int n = 1000000;
         HashMapLinearProbing m1 = new HashMapLinearProbing(n);
-        HashMapLinearChaining m2 = new HashMapLinearChaining(n);
+//        HashMapLinearChaining m2 = new HashMapLinearChaining(n);
 
         int count = 0;
         //read in the dictionary (213k words)
-        FileInputStream fis = new FileInputStream("dict.txt");
-
-        String word;
-        while (( i = fis.read()) != -1) {
-            m1.add(word, count); // each word has a unique id number
-            m2.add(word, count);
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream("dict.txt");
+            MyBufferedReader myReader = new MyBufferedReader(fis);
+            String line1 = myReader.nextLine();
+            m1.add(line1, count); // each word has a unique id number
+//            m2.add(word, count);
             count++;
+            System.out.println(line1);
+        } finally {
+            fis.close();
         }
 
-        System.out.println("Linear probing\n");
-        final String words[] = {"apple", "bear", "cat", "dog", "arggg", "juwqehtrkqwejhr"};
-
-        for (int i = 0; i < words.length; i++) {
-            Integer id = m1.get(words[i]); // return null if not found
-            System.out.println("word " +  words[i] + " " + id + "id=" + id + '\n');
-        }
-        // print out the histogram showing count of inserts taking 1, 2, 3, ... 9+
-        m1.hist();
-
-        System.out.println("\n\nLinear chaining\n");
-        for (int i = 0; i < words.length; i++) {
-            Integer id = m2.get(words[i]); // return null if not found
-            System.out.println("word " +  words[i] + " " + id + "id=" + id + '\n');
-        }
-        // print out the histogram showing bins of size 0, 1, 2, 3, ... 9+
-        m2.hist();
+//        System.out.println("Linear probing\n");
+//        final String words[] = {"apple", "bear", "cat", "dog", "arggg", "juwqehtrkqwejhr"};
+//
+//        for (int i = 0; i < words.length; i++) {
+//            Integer id = m1.get(words[i]); // return null if not found
+//            System.out.println("word " +  words[i] + " " + id + "id=" + id + '\n');
+//        }
+//        // print out the histogram showing count of inserts taking 1, 2, 3, ... 9+
+//        m1.hist();
+//
+//        System.out.println("\n\nLinear chaining\n");
+//        for (int i = 0; i < words.length; i++) {
+//            Integer id = m2.get(words[i]); // return null if not found
+//            System.out.println("word " +  words[i] + " " + id + "id=" + id + '\n');
+//        }
+//        // print out the histogram showing bins of size 0, 1, 2, 3, ... 9+
+//        m2.hist();
     }
 }
 

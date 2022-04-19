@@ -1,4 +1,4 @@
-package uadvance.calculator;
+package udacity.calculator;
 
 import java.util.HashMap;
 import java.util.Map;

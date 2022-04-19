@@ -1,4 +1,4 @@
-package uadvance;
+package udacity;
 
 public final class ThisExample {
     // this keyword inside the lambda references the enclosing class, which is "class advance.ThisExample"

@@ -29,6 +29,7 @@ public class HeapSort {
             } else {
                 idxToSwap = childOneIdx;
             }
+
             if (heap[idxToSwap] > heap[currentIdx]) {
                 swap(currentIdx, idxToSwap, heap);
                 currentIdx = idxToSwap;

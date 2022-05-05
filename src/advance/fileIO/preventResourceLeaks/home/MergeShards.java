@@ -1,9 +1,13 @@
+package advance.fileIO.exercisePreventResourceLeaks.home;
+
 import java.io.BufferedReader;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
 public final class MergeShards {
@@ -27,6 +31,38 @@ public final class MergeShards {
     //
     //       In the "finally" part of the try-finally block, make sure to close all the
     //       BufferedReaders.
+    try {
+      for (Path input : inputs) {
+        readers.add(Files.newBufferedReader(input));
+      }
+      PriorityQueue<WordEntry> words = new PriorityQueue<>();
+      for (BufferedReader reader : readers) {
+        String word = reader.readLine();
+        if (word != null) {
+          words.add(new WordEntry(word, reader));
+        }
+      }
+
+      try (Writer writer = Files.newBufferedWriter(outputPath)) {
+        while (!words.isEmpty()) {
+          WordEntry entry = words.poll();
+          writer.write(entry.word);
+          writer.write(System.lineSeparator());
+          String word = entry.reader.readLine();
+          if (word != null) {
+            words.add(new WordEntry(word, entry.reader));
+          }
+        }
+      }
+    } finally {
+      for (BufferedReader reader : readers) {
+        try {
+          reader.close();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
   }
 
   private static final class WordEntry implements Comparable<WordEntry> {

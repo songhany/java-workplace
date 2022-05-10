@@ -1,4 +1,4 @@
-package advance.fileIO.exerciseBufferedStreams.home;
+package advance.fileIO.bufferedStreams.home;
 
 import java.io.BufferedReader;
 import java.io.Writer;

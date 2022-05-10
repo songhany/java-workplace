@@ -1,4 +1,4 @@
-package advance.fileIO.exercisePreventResourceLeaks.home;
+package advance.fileIO.preventResourceLeaks.home;
 
 import java.io.BufferedReader;
 import java.io.Writer;

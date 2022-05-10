@@ -71,7 +71,7 @@ public class Fermet {
     }
 
     public static void main(String[]args) {
-//        System.out.println("====== powerMod test case1: prime 5 ====== ");
+//        System.out.println("====== powerMod BigIntegerTest case1: prime 5 ====== ");
 //        BigInteger a1 = new BigInteger("1");
 //        BigInteger a2 = new BigInteger("2");
 //        BigInteger a3 = new BigInteger("3");
@@ -84,7 +84,7 @@ public class Fermet {
 //        System.out.println(powerMod(a4, pMinusOne, p));  // 4^(prime-1) % prime = 1.  a4 = 4 is a witnesses
 //
 //
-//        System.out.println("====== powerMod test case2: Carmichael number 561 ====== ");
+//        System.out.println("====== powerMod BigIntegerTest case2: Carmichael number 561 ====== ");
 //        p = new BigInteger("561"); // Carmichael number 561, false positive
 //        pMinusOne = p.subtract(BigInteger.ONE);
 //        BigInteger f1 = new BigInteger("1");
@@ -103,7 +103,7 @@ public class Fermet {
 //        System.out.println(powerMod(f7, pMinusOne, p));
 
 
-        System.out.println("====== fermat test: ====== ");
+        System.out.println("====== fermat BigIntegerTest: ====== ");
 
         BigInteger p1 = new BigInteger("3");
         System.out.println("3 is " + fermat(p1, 2));

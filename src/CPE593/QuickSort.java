@@ -117,7 +117,7 @@ public class QuickSort {
 //        System.out.println(Arrays.toString(e));  // [50, 50, 50, 62, 62]
 
         // Open the file hw3.txt
-        System.out.println("========== Open file 'hw3.txt' and test ==========");
+        System.out.println("========== Open file 'hw3.txt' and BigIntegerTest ==========");
         File file = new File("hw3.txt");
         Scanner scan = new Scanner(file);
         while (scan.hasNextLine()) {

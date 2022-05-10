@@ -45,7 +45,7 @@ public class Complexity {
   // O(logn)
   public static void method3(int n) {
     int counter=0;
-    for (int i=n; i>0; i=i/2) {
+    for (int i=n; i > 0; i=i/2) {
       System.out.println("Opertaion" + counter);
       counter ++;
     }
@@ -54,8 +54,8 @@ public class Complexity {
   // O(nlogn)
   public static void method4(int n) {
     int counter = 0;
-    for (int i=0; i<n; i++) {
-      for (int j=n; j>0; j=j/2) {
+    for (int i=0; i < n; i++) {
+      for (int j=n; j > 0; j = j/2) {
         System.out.println("Opertaion" + counter);
         counter ++;
       }
@@ -66,7 +66,7 @@ public class Complexity {
   public static void method5(int n) {
     int counter=0;
 
-    for (int i= n; i>1; i=(int)Math.floor(Math.sqrt(i))) {
+    for (int i= n; i > 1; i = (int)Math.floor(Math.sqrt(i))) {
       //System.out.println(i);
       System.out.println("Opertaion" + counter);
       counter ++;

@@ -11,11 +11,8 @@ public class CalculatePennies {
     if (numDays == 0) {
       return numPennies;
     }
-    else {
-      totalPennies = doublePennies((numPennies * 2), numDays - 1);
-    }
 
-    return totalPennies;
+    return doublePennies((numPennies * 2), numDays - 1);
   }
 
   // Program computes pennies if you have 1 penny today,

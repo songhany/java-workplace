@@ -1,4 +1,4 @@
-package udacity.binaryOperation;
+package advance.binaryOperation;
 
 public final class Main {
     public static void main(String[] args) {

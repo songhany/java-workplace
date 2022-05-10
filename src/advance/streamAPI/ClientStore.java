@@ -1,4 +1,4 @@
-package udacity.streamAPI;
+package advance.streamAPI;
 
 import java.time.Duration;
 import java.time.ZoneId;

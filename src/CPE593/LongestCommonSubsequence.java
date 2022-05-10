@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class LongestCommonSubsequence {
     public static int longest(String s,  String t)  {
         int[][] longest  =  new int[s.length() + 1][ t.length() + 1];
+
         for (int i = 1;  i <= s.length();  i++)  {
             for (int  j = 1;  j <= t.length();  j++)  {
                 if  ( s.charAt(i - 1)  ==  t.charAt(j - 1) )  {
@@ -26,8 +27,8 @@ public class LongestCommonSubsequence {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String a = loadFile("a.txt");
-        String b = loadFile("b.txt");
+        String a = loadFile(args[0]);
+        String b = loadFile(args[1]);
         System.out.println("length of Longest Common Subsequence: " + longest(a, b));
     }
 }

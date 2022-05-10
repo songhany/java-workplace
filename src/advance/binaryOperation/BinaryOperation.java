@@ -1,4 +1,4 @@
-package udacity.binaryOperation;
+package advance.binaryOperation;
 
 public interface BinaryOperation<T, R> {
 

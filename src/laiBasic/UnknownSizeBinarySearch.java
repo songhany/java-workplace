@@ -39,7 +39,7 @@ public class UnknownSizeBinarySearch {
 
 //    public static void main(String[] args) {
 //        UnknownSizeBinarySearch sol = new UnknownSizeBinarySearch();
-//        // test cases
+//        // BigIntegerTest cases
 //        Dictionary dict = new DictImpl(new int[0]);
 //        int target = 0;
 //        System.out.println("Expect: -1, Actual: " + sol.search(dict, target));

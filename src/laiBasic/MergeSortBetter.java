@@ -55,7 +55,7 @@ public class MergeSortBetter {  // better way
     public static void main(String[] args) {
         MergeSortBetter solution = new MergeSortBetter();
 
-        // test case to cover possible situation
+        // BigIntegerTest case to cover possible situation
         int[] array = null;
         array = solution.mergeSort(array);
         System.out.println(Arrays.toString(array));

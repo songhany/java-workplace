@@ -67,7 +67,7 @@ public class MergeSortForLinkedList {
     public static void main(String[] args) {
         MergeSortForLinkedList solution = new MergeSortForLinkedList();
 
-        // test case to cover possible situation
+        // BigIntegerTest case to cover possible situation
         ListNode head = new ListNode(4);
         head.next = new ListNode(3);
         head.next.next = new ListNode(2);

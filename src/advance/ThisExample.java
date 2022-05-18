@@ -18,7 +18,7 @@ public final class ThisExample {
 
     public static void main(String[] args) {
         ThisExample thisExample = new ThisExample();
-        thisExample.withLambda.run();  // From lambda: class advance.ThisExample
+        thisExample.withLambda.run();    // From lambda: class advance.ThisExample
         thisExample.withSubclass.run();  // From subclass: class advance.ThisExample$1
     }
 }

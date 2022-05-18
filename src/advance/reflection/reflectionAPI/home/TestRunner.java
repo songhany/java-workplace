@@ -1,3 +1,5 @@
+package advance.reflection.reflectionAPI.home;
+
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -27,6 +29,23 @@ public final class TestRunner {
       //        3. Call afterEachTest()
       //        4. Record the test results by adding getTestName(...) to either the "passed" list
       //           of the "failed" list.
+      if (!UnitTest.class.isAssignableFrom(klass)) {
+        throw new IllegalArgumentException("Class " + klass.toString() + " must implement UnitTest");
+      }
+
+      for (Method method : klass.getDeclaredMethods()) {
+        if (method.getAnnotation(Test.class) != null) {
+          try {
+            UnitTest test = (UnitTest) klass.getConstructor().newInstance();
+            test.beforeEachTest();
+            method.invoke(test);
+            test.afterEachTest();
+            passed.add(getTestName(klass, method));
+          } catch (Throwable throwable) {
+            failed.add(getTestName(klass, method));
+          }
+        }
+      }
     }
 
     System.out.println("Passed tests: " + passed);

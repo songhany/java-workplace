@@ -54,7 +54,7 @@ public class NQueensII {
     }
 
     public static void main(String[] args) {
-        NQueensII solution = new NQueensII();
-        System.out.println(solution.nqueensII(4));
+        NQueensII sol = new NQueensII();
+        System.out.println(sol.nqueensII(4));
     }
 }

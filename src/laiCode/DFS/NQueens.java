@@ -35,8 +35,8 @@ public class NQueens {
     }
 
     public static void main(String[] args) {
-        NQueens solution = new NQueens();
+        NQueens sol = new NQueens();
 
-        System.out.println(solution.nqueens(4));
+        System.out.println(sol.nqueens(4));
     }
 }

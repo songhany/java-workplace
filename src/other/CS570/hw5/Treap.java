@@ -225,7 +225,7 @@ public class Treap<E extends Comparable<E>> {
     return rootNode;
   }
 
-  // Test
+  // PriorityQueueCompareLogic
   public static void main(String[] args) {
     Treap testTree = new Treap < Integer >();
     testTree.add (4 ,19);

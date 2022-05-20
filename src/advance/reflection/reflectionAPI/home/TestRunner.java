@@ -23,9 +23,9 @@ public final class TestRunner {
       //        1. Ensure the class implements the UnitTest interface.
       //        2. Create an instance of the class and cast it to UnitTest.
 
-      // TODO: For each method that is annotated with @Test:
+      // TODO: For each method that is annotated with @PriorityQueueCompareLogic:
       //        1. Call beforeEachTest()
-      //        2. Invoke the method annotated with @Test
+      //        2. Invoke the method annotated with @PriorityQueueCompareLogic
       //        3. Call afterEachTest()
       //        4. Record the test results by adding getTestName(...) to either the "passed" list
       //           of the "failed" list.

@@ -1,6 +1,6 @@
 package advance.reflection.customAnnotations.home;
 
-// TODO: Add @Test annotations to the unit test methods in this class.
+// TODO: Add @PriorityQueueCompareLogic annotations to the unit test methods in this class.
 public final class CalculatorTest implements UnitTest {
 
   private final Calculator calculator = new Calculator();

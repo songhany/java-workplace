@@ -85,8 +85,8 @@ public class QuickSort {
     public static void main(String[] args) throws FileNotFoundException {
         QuickSort qs = new QuickSort();
 
-        // Test your code with a large number of elements (10 million)
-        System.out.println("========== Test your code with a large number of elements ==========");
+        // PriorityQueueCompareLogic your code with a large number of elements (10 million)
+        System.out.println("========== PriorityQueueCompareLogic your code with a large number of elements ==========");
         int[] millionArray = qs.generateArray(10000000);
         qs.fischerYates(millionArray);  // then uses Fischer-Yates to scramble the array
         //System.out.println("Use FischerYates: " + Arrays.toString(millionArray));
@@ -94,8 +94,8 @@ public class QuickSort {
         qs.test(millionArray);
         //System.out.println("Quicksort result: " + Arrays.toString(millionArray));
 
-        // Test case
-//        System.out.println("========== Test case  ==========");
+        // PriorityQueueCompareLogic case
+//        System.out.println("========== PriorityQueueCompareLogic case  ==========");
 //        int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 //        qs.quickSort(a);
 //        System.out.println(Arrays.toString(a));  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]

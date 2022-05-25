@@ -11,7 +11,7 @@ import java.util.Map;
 //  public static void main(String[] args) {
 //
 //    FakeClock fakeClock = new FakeClock();
-//    Map<Path, Instant> fakeModifiedTimes = new HashMap<>();
+//    Map<Path, Instant> fakeModifiedTimes = new MyHashMap<>();
 //    FakeMetadataFetcher fakeMetadataFetcher = new FakeMetadataFetcher(fakeModifiedTimes);
 //
 //    Injector injector = Guice.createInjector(

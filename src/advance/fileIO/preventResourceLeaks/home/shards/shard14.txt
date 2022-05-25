@@ -30,7 +30,7 @@ elderly
 engine
 entrance
 estimation
-laiCode.algoexpert
+expert
 farming
 florence
 forest

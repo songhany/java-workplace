@@ -4,15 +4,15 @@ public class SearchRange {
     public int[] searchRange(int[] nums, int target) {
         double left = target - 0.5;
         double right = target + 0.5;
-        int l = bs(nums, left);
-        int r = bs(nums, right);
+        int l = binarySearch(nums, left);
+        int r = binarySearch(nums, right);
         if(l == r) {
             return new int[]{-1, -1};
         }
         return new int[]{l, r-1};
     }
 
-    public int bs(int[] nums, double target) {
+    public int binarySearch(int[] nums, double target) {
         int left = 0;
         int right = nums.length - 1;
         while(left <= right){

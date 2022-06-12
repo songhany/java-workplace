@@ -28,7 +28,7 @@ public class ProvideComparator {
     // 2nd way: （Static）nested class
     static class  MyComparator  implements  Comparator<Student>  {
         @Override
-        public  int  compare(Student s1,  Student s2)  {
+        public int compare(Student s1,  Student s2)  {
             return  s1.getName().compareTo (s2.getName());
         }
     }
@@ -37,7 +37,7 @@ public class ProvideComparator {
 // 1nd way: Top-level class
 class  MyComparator  implements  Comparator<Student>  {
     @Override
-    public  int  compare(Student s1,  Student s2)  {
+    public int compare(Student s1,  Student s2)  {
         return  s1.getName().compareTo (s2.getName());
     }
 }

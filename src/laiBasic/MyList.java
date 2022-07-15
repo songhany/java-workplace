@@ -1,4 +1,4 @@
-package laiBasic.practice;
+package laiBasic;
 
 import java.util.*;
 import java.util.ArrayList;
